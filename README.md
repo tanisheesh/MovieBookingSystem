@@ -1,4 +1,4 @@
-# Project0 - Movie Booking System
+# Movie Booking System
 
 ## Overview
 This comprehensive movie booking system is designed to help a movie theater company manage ticket bookings across India. The system is built using two different technology stacks to cater to various requirements and environments.
