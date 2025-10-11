@@ -7,7 +7,5 @@ This comprehensive movie booking system is designed to help a movie theater comp
 1. [**Python with MySQL**](python-sql)
 2. [**Python with SQLite**](python-sqlite)
 
-This project is part of the [Net-Nex](https://github.com/net-nex) organization.
-
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
