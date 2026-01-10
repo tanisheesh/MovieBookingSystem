@@ -1,19 +1,34 @@
 # Movie Booking System (Python & SQLite)
 
+## 🎬 Live Demo
+**🚀 [Try the Live App](https://moviebookingsystem-iztj.onrender.com/)**
+
 ## Overview
-A theater booking system that allows users to book movie tickets, view current bookings, and order food items. It provides multiple interfaces including a modern web-based Streamlit app that's ready for cloud deployment.
+A modern theater booking system that allows users to book movie tickets, view current bookings, and order food items. Features a sleek web interface with real-time pricing, waiting list management, and automatic seat assignment.
 
-## Features
+## ✨ Features
 
-- **Theater Booking**: Book tickets for different theaters and screen types (Gold, IMAX, and General)
-- **Food Orders**: Order food items like popcorn and sandwiches with price discounts based on screen type
-- **Waiting List**: If the screen is full, users are added to a waiting list and notified when a seat becomes available
-- **Cancel Bookings**: Cancel tickets (if the show is more than 30 minutes away)
-- **User-Friendly UI**: Interactive web interface for booking and viewing bookings
+- **🎫 Smart Booking System**: Book tickets for different theaters and screen types (Gold, IMAX, General)
+- **🍿 Food Ordering**: Order popcorn and sandwiches with automatic discounts based on screen type
+- **⏳ Intelligent Waiting List**: Automatic seat assignment when cancellations occur
+- **💰 Real-time Pricing**: Live price updates as you add food items
+- **📱 Responsive Design**: Works perfectly on desktop and mobile
+- **🔄 Live Updates**: Real-time availability and booking status
 
----
+## 🎯 Screen Types & Pricing
 
-## Quick Start
+| Screen Type | Seats | Ticket Price | Food Discount |
+|-------------|-------|--------------|---------------|
+| **Gold** 🥇 | 2 seats | ₹400 | 10% off food |
+| **IMAX** 🎭 | 5 seats | ₹300 | 5% off food |
+| **General** 🎪 | 10 seats | ₹200 | No discount |
+
+## 🍿 Food Menu
+- **Popcorn**: ₹150 per serving
+- **Sandwich**: ₹100 per serving
+
+
+## 🚀 Quick Start
 
 ### Local Development
 
@@ -24,66 +39,41 @@ A theater booking system that allows users to book movie tickets, view current b
    pip install -r requirements.txt
    ```
 
-2. **Run the Streamlit app**:
+2. **Run the app**:
    ```bash
    streamlit run app.py
    ```
 
-3. **Access the app**: Open your browser to `http://localhost:8501`
+3. **Access**: Open `http://localhost:8501`
 
-## Deploy to Render
+## 🧪 How to Test
 
-1. **Fork this repository** to your GitHub account
+### Test the Waiting List Feature:
+1. **Fill Gold seats** (book 2 tickets) → 3rd person goes to waiting list
+2. **Cancel a Gold booking** → Waiting list person automatically gets confirmed
+3. **Check waiting list section** → See who's waiting and their position
 
-2. **Connect to Render**:
-   - Go to [render.com](https://render.com) and sign up/login
-   - Click "New +" → "Web Service"
-   - Connect your GitHub repository
-   - Select the `python-sqlite` folder as the root directory
+### Test Real-time Pricing:
+1. **Select screen type** → See base ticket price
+2. **Add food items** → Watch total price update instantly
+3. **Try different screen types** → See discount percentages change
 
-3. **Configure the service**:
-   - **Name**: `movie-booking-system` (or your preferred name)
-   - **Environment**: `Python 3`
-   - **Build Command**: `pip install -r requirements.txt`
-   - **Start Command**: `streamlit run app.py --server.port=$PORT --server.address=0.0.0.0 --server.headless=true --server.enableCORS=false --server.enableXsrfProtection=false`
+### Test Booking Flow:
+1. **Select theater and screen type**
+2. **Check availability** (Available/Total seats shown)
+3. **Enter your name**
+4. **Add food items** (optional)
+5. **See price breakdown** with discounts
+6. **Book ticket** → Get confirmation with seat number
 
-4. **Deploy**: Click "Create Web Service" and wait for deployment to complete
-
-**Alternative**: Use the included `render.yaml` file for automatic configuration.
-
-The app will automatically:
-- Create a SQLite database
-- Initialize with sample theater and movie data
-- Be accessible via your Render URL
-
----
-
-## Technical Details
+## 🛠 Technical Details
 
 - **Database**: SQLite (production-ready, no setup required)
 - **Backend**: SQLAlchemy 1.4 ORM with Python 3.11
 - **Frontend**: Streamlit web framework
 - **Deployment**: Render-ready with automatic database initialization
+- **Features**: Real-time updates, session management, error handling
 
-## Screenshots
-
-### Streamlit Web App
-![Streamlit](images/streamlit.jpg)
-
-### CLI Interface
-![CLI](images/cli.jpg)
-
-### GUI Interface
-![GUI](images/gui.jpg)
-
----
-
-## Environment Variables
-
-For production deployment, you can optionally set:
-- `DATABASE_URL`: Custom database URL (defaults to SQLite)
-- `PORT`: Server port (automatically set by Render)
-
-## License
+## 📄 License
 
 This project is licensed under the MIT License.
