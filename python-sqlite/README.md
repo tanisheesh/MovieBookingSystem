@@ -61,7 +61,7 @@ The app will automatically:
 ## Technical Details
 
 - **Database**: SQLite (production-ready, no setup required)
-- **Backend**: SQLAlchemy ORM with Python
+- **Backend**: SQLAlchemy 1.4 ORM with Python 3.11
 - **Frontend**: Streamlit web framework
 - **Deployment**: Render-ready with automatic database initialization
 

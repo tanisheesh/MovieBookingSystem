@@ -63,4 +63,4 @@ class FoodOrder(Base):
     booking = relationship("Booking", back_populates="food_orders")
 
 Base.metadata.create_all(engine)
-Session = sessionmaker(bind=engine, expire_on_commit=False)
+Session = sessionmaker(bind=engine)
