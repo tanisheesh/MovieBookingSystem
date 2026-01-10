@@ -3,9 +3,13 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
 from datetime import datetime
 import enum
+import os
 
 Base = declarative_base()
-engine = create_engine('mysql://root:tanishpoddar@localhost/theater_db')
+
+# Use SQLite for local development and production
+DATABASE_URL = os.getenv('DATABASE_URL', 'sqlite:///theater_booking.db')
+engine = create_engine(DATABASE_URL, echo=False)
 
 class ScreenType(enum.Enum):
     GOLD = "gold"
@@ -59,4 +63,4 @@ class FoodOrder(Base):
     booking = relationship("Booking", back_populates="food_orders")
 
 Base.metadata.create_all(engine)
-Session = sessionmaker(bind=engine)
+Session = sessionmaker(bind=engine, expire_on_commit=False)
