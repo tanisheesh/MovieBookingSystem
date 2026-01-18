@@ -16,7 +16,7 @@ This part of the project is built using Python and MySQL. It serves as the backe
 ## Getting Started
 1. Clone the repository:
    ```sh
-   git clone https://github.com/tanishpoddar/MovieBookingSystem-Project0.git
+   git clone https://github.com/tanisheesh/MovieBookingSystem-Project0.git
    cd MovieBookingSystem-Project0/python-app
    ```
 2. Install dependencies:
